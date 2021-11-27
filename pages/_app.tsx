@@ -1,7 +1,8 @@
 import { AppProps } from "next/app";
+import { storeWrapper } from "../redux/store";
 import "../styles/globals.scss";
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
     return <Component {...pageProps} />;
 }
-export default MyApp;
+export default storeWrapper.withRedux(MyApp);

@@ -30,7 +30,7 @@ interface FetchProductsFailureAction {
 }
 
 interface AddProductsSuccessAction {
-  type: typeof ProductActionTypes.PRODUCT_EDIT_SUCCESS;
+  type: typeof ProductActionTypes.PRODUCT_ADD_SUCCESS;
   payload: IProduct;
 }
 
@@ -40,7 +40,7 @@ interface EditProductsSuccessAction {
 }
 
 interface ProductsSetActiveAction {
-  type: typeof ProductActionTypes.PRODUCT_ADD_SUCCESS;
+  type: typeof ProductActionTypes.PRODUCT_SET_ACTIVE;
   payload: IProduct;
 }
 
@@ -49,7 +49,7 @@ interface ProductsSetUpdateModeAction {
   payload: UpdateMode;
 }
 
-export type branchActionsCreators =
+export type productActionsCreators =
   | FetchProductsRequestAction
   | FetchProductsSuccessAction
   | FetchProductsFailureAction

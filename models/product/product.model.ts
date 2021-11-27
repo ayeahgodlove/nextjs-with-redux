@@ -1,3 +1,5 @@
+import { IBaseState } from "../base/base.model";
+
 export interface IProduct {
   name: string;
   category: string;
@@ -9,6 +11,11 @@ export interface IProduct {
   countInStock: number;
   description: string;
   createdOn: Date;
+}
+
+export interface IProductState extends IBaseState {
+  readonly products: IProduct[];
+  readonly product: IProduct;
 }
 
 export const emptyProduct: IProduct = {
